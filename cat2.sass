@@ -1,0 +1,39 @@
+$color_yellow: #ffbc21
+$color_blue: #282f44
+
+html,body
+    margin: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background: $color_blue
+.cat
+    width: 150px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0px
+    transition: 0.5s
+
+#cat_blue
+    left: 20%
+#cat_yellow
+    left: 50%
+#cat_grey
+    left: 80%
+
+
+#cross
+    position: absolute
+    &::before,&::after
+        content: ""
+        display: block
+        width: 60px
+        height: 15px
+        background: #fff
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%) rotate(45deg)
+    &::after
+        transform: translate(-50%,-50%) rotate(-45deg)
